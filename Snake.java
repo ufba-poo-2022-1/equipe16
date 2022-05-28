@@ -21,12 +21,10 @@ public class Snake extends Actor
         if (Greenfoot.isKeyDown("right")){
             turn(3);
         }
-        if (Greenfoot.isKeyDown("s")){
-            move(0);
+        if (Greenfoot.isKeyDown("up")){
+            move(2);
         }
-        if (Greenfoot.isKeyDown("d")){
-            move(0);
-        }
+
         /* Checa a colisão com uma fruta.*/
     
         Actor comida;
