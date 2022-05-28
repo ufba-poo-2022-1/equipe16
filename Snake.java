@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Snake here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Diego Anjos 
+ * @version 2022-05-28
  */
 public class Snake extends Actor
 {
@@ -14,6 +14,31 @@ public class Snake extends Actor
      */
     public void act()
     {
-        move(5);
+        
+        if (Greenfoot.isKeyDown("left")){
+            turn(-3);
+        }
+        if (Greenfoot.isKeyDown("right")){
+            turn(3);
+        }
+        if (Greenfoot.isKeyDown("s")){
+            move(0);
+        }
+        if (Greenfoot.isKeyDown("d")){
+            move(0);
+        }
+        /* Checa a colisão com uma fruta.*/
+    
+        Actor comida;
+        comida = getOneObjectAtOffset(0 ,0 , Food.class);
+        if(comida != null)
+        {
+            World world;
+            world = getWorld();
+            world.removeObject(comida);
+        }
     }
+    
+    
+    
 }
