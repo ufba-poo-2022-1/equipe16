@@ -19,7 +19,7 @@ public class MyWorld extends World
         super(900, 900, 1);
         addObject(new Food(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         addObject(new Food(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
-        addObject(new Food(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+        addObject(new Obstaculo(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
         addObject(new Snake(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
     }
         
