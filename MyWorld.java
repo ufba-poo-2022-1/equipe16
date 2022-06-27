@@ -16,12 +16,15 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 600, 1);
-        addObject(new Food(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
-        addObject(new Food(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
-        addObject(new Predador(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
-        addObject(new Snake(), Greenfoot.getRandomNumber(700), Greenfoot.getRandomNumber(700));
-        addObject(new Predador(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800));
+        super(700, 700, 1);
+        addObject(new Comida(), Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        addObject(new Comida(), Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        addObject(new Predador(), Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        addObject(new Predador(), Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        
+        Snake cobra1 = new Snake();
+        
+        addObject(cobra1, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
         
     }
         
